@@ -1,6 +1,4 @@
 import pygame
-import time
-
 # Font Engine Initialization for adding text
 pygame.font.init()
 
