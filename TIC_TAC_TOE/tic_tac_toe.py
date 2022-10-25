@@ -67,7 +67,7 @@ playable_rect = [
         pygame.Rect(20, HEIGHT / 1.5 + 20, WIDTH / 3, HEIGHT / 3),
         pygame.Rect(WIDTH / 3 + 20, HEIGHT / 1.5 + 20, WIDTH / 1.5 - 200, HEIGHT / 3),
         pygame.Rect(WIDTH / 1.5 + 20, HEIGHT / 1.5 + 20, WIDTH / 1.5, HEIGHT / 3),
-    ],
+    ]
 ]
 
 # drawing function to draw basic borders
@@ -162,9 +162,10 @@ def main():
                 if tup[i] in O_PLAYER:
                     sum += 1
                 if sum == 3:
-                    print("O PLAYER WON")
                     # text = RESULT_FONT.render("O WON", 1, RED)
-                    time.sleep(1)
+                    # WIN.blit(text, (WIDTH / 2, HEIGHT / 2))
+                    # pygame.display.update()
+                    pygame.time.delay(500)
                     WIN.blit(O_WIN, (0, 0))
                     pygame.display.update()
                     run = False
@@ -177,26 +178,26 @@ def main():
                 if tup[i] in X_PLAYER:
                     sum += 1
                 if sum == 3:
-                    print("X PLAYER WON")
                     # text = RESULT_FONT.render("X WON", 1, RED)
-                    time.sleep(1)
+                    # WIN.blit(text, (WIDTH / 2, HEIGHT / 2))
+                    # pygame.display.update()
+                    pygame.time.delay(500)
                     WIN.blit(X_WIN, (0, 0))
                     pygame.display.update()
                     run = False
                     won = True
-
+                
         # Checking for draw
         if not won:
             if len(already_done_rect) == 9:
-                print("DRAW")
                 text = RESULT_FONT.render("DRAW", 1, RED)
-                time.sleep(1)
+                # pygame.time.delay(500)
                 WIN.blit(text, (WIDTH / 2, HEIGHT / 2))
                 pygame.display.update()
                 run = False
 
-    # After match is finished displaying result and waiting for 2 sec before restarting the game
-    time.sleep(2)
+    # After match is finished displaying result and waiting for 1 sec before restarting the game
+    pygame.time.delay(1000)
     main()
 
 
