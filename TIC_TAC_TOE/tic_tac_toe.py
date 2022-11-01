@@ -128,8 +128,8 @@ def main():
         # Loop to get all events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                run = False
-                pygame.quit()
+                pygame.QUIT
+                return
 
         # Getting mouse key pressed and mouse positions
         keys_pressed = pygame.mouse.get_pressed()
@@ -150,7 +150,6 @@ def main():
                     else:
                         draw_x(pos, i, j, X_PLAYER)
                         choice = True
-
                 else:
                     draw()
 
