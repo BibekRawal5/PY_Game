@@ -1,4 +1,5 @@
 import pygame
+import os
 
 # Font Engine Initialization for adding text
 pygame.font.init()
@@ -36,16 +37,16 @@ WINING_SET = {
 }
 
 # Loading the X and O image
-CIRCLE_IMAGE = pygame.image.load("circle.png")
+CIRCLE_IMAGE = pygame.image.load(os.path.join('Assets', 'circle.png'))
 CIRCLE = pygame.transform.scale(CIRCLE_IMAGE, (120, 120))
 
-O_WIN_IMAGE = pygame.image.load("o_win.jpg")
+O_WIN_IMAGE = pygame.image.load(os.path.join('Assets', 'o_win.jpg'))
 O_WIN = pygame.transform.scale(O_WIN_IMAGE, (WIDTH, HEIGHT))
 
-X_IMAGE = pygame.image.load("x.png")
+X_IMAGE = pygame.image.load(os.path.join('Assets', 'x.png'))
 X = pygame.transform.scale(X_IMAGE, (120, 120))
 
-X_WIN_IMAGE = pygame.image.load("x_win.jpg")
+X_WIN_IMAGE = pygame.image.load(os.path.join('Assets', 'x_win.jpg'))
 X_WIN = pygame.transform.scale(X_WIN_IMAGE, (WIDTH, HEIGHT))
 
 # Decalaring list rectangles, total 9 rectangles for 9 playable slots
